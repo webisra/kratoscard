@@ -5,7 +5,7 @@ red: rgb(179, 56, 59);
 white: rgb(255, 255, 255);
 grey-700: rgb(51, 51, 51);
 grey-800: rgb(31, 31, 31);
-900: rgb(20, 20, 20);
+grey-900: rgb(20, 20, 20);
 
 ## Radius
 radius-sm: 8px; 
