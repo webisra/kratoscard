@@ -5,16 +5,27 @@
 :root {
     --color-red: rgb(179, 56, 59);
     --color-white: rgb(255, 255, 255);
-    --color-grey-700: rgb(51, 51, 51);
+    --color-grey-700: rgb(14, 6, 6);
     --color-grey-800: rgb(31, 31, 31);
     --color-grey-900: rgb(20, 20, 20);
     --radius-sm: 8px;
     --radius-full: 100%;
+    --spacing-10: 10px;
+    --spacing-20: 20px;
+    --spacing-30: 30px;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* definindo a cor de fundo para a página */
 body {
     background-color: var(--color-grey-900);
+    font-family: "Inter", sans-serif;
 }
 
 /* definindo formatações que serão usadas na div */
@@ -26,12 +37,16 @@ body {
     width: 500px;
     text-align: center;
     border-radius: var(--radius-sm);
+    padding: var(--spacing-20);
+    margin: var(--spacing-20) auto ;
+    
 }
 
 .container img {
     border-radius: var(--radius-full);
     border: 5px solid var(--color-grey-700);
     transition: .5s;
+    width: 100px;
 }
 
 .container:hover img {
@@ -40,9 +55,48 @@ body {
     rotate: 360deg;
 }
 
+.container h1 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-block: var(--spacing-10);
+}
+
 /* Efeito cascata: a formatação que estiver mais abaixo é a que prevalece */
 .container h2 {
     color: var(--color-red);
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: var(--spacing-10);
 }
 
+.container p {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: var(--spacing-10);
+}
 
+/* formatando os links de redes sociais */
+.social {
+    list-style: none;
+}
+
+.social li {
+    background-color: var(--color-grey-700);
+    margin-block: var(--spacing-10);
+    padding-block: var(--spacing-10);
+    border-radius: var(--radius-sm);
+    transition: .5s;
+}
+
+.social li:hover {
+    background-color: var(--color-red);
+}
+
+.social a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    width: 100%;
+    display: block;
+    /* letter-spacing: 1px; */
+}
